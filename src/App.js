@@ -73,7 +73,6 @@ const App = () => {
   }, [dispatch])
 
   const {foodsList, activeIndex} = useSelector(state=>state.foods)
-  console.log(foodsList);
 
   return (
     <div className="home">

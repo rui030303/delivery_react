@@ -11,7 +11,6 @@ const Cart = () => {
   const [visible, setVisible] = useState(false)
 
   const totalPrice = cartList.reduce((a,c) => a + c.count * c.price, 0)
-  console.log(cartList);
 
   const cart = []
   return (

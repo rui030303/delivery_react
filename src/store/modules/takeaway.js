@@ -2,6 +2,8 @@
 
 import {createSlice} from "@reduxjs/toolkit"
 import axios from "axios"
+
+
 const foodsStore = createSlice({
     name:'foods',
     initialState:{
@@ -44,10 +46,12 @@ const foodsStore = createSlice({
 const {setFoodsList,changeActiveIndex, addCart,increCount, decreCount,clearCart} = foodsStore.actions
 const fetchFoodsList = ()=>{
     return async(dispatch)=>{
-        const res = await axios.get('http://localhost:3004/takeaway')
+        const res = await axios.get('https://my-json-server.typicode.com/rui030303/data_delivery/takeaway')
         dispatch(setFoodsList(res.data))
     }
 }
+
+
 export {fetchFoodsList,changeActiveIndex, addCart,increCount, decreCount,clearCart}
 const reducer = foodsStore.reducer
 export default reducer
