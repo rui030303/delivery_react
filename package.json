@@ -2,7 +2,7 @@
   "name": "day03-demo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "." ,
+  "homepage": ".",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.2",
     "@testing-library/jest-dom": "^5.16.5",
@@ -21,7 +21,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "serve": "json-server server/data.json --port 3004"
+    "serve": "json-server server/data.json --port 3004",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -r https://github.com/rui030303/delivery_react.git -b gh-pages"
   },
   "eslintConfig": {
     "extends": [
